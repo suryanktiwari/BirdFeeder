@@ -1,6 +1,5 @@
-package com.example.birdfeeder
+package com.example.birdfeeder.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -14,7 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.birdfeeder.ui.theme.BirdFeederTheme
 
-class ConfigureData : ComponentActivity() {
+class QuickFeeder : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -34,6 +33,6 @@ class ConfigureData : ComponentActivity() {
 
     @Composable
     fun FeederGreeting() {
-        Text("Configure data")
+        Text("Bird Feeder")
     }
 }

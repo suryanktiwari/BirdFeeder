@@ -1,6 +1,5 @@
-package com.example.birdfeeder
+package com.example.birdfeeder.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

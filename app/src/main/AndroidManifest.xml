@@ -13,10 +13,10 @@
         android:theme="@style/Theme.BirdFeeder"
         tools:targetApi="31">
         <activity
-            android:name=".ConfigureData"
+            android:name=".activity.ConfigureData"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.BirdFeeder">
             <intent-filter>
@@ -26,11 +26,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuickFeeder"
+            android:name=".activity.QuickFeeder"
             android:exported="true"
             android:theme="@style/Theme.BirdFeeder" />
         <activity
-            android:name=".MealPlanner"
+            android:name=".activity.MealPlanner"
             android:exported="true"
             android:theme="@style/Theme.BirdFeeder" />
     </application>

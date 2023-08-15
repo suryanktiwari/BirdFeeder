@@ -1,4 +1,4 @@
-package com.example.birdfeeder
+package com.example.birdfeeder.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.birdfeeder.R
 import com.example.birdfeeder.ui.theme.BirdFeederTheme
 
 class MainActivity : ComponentActivity() {
