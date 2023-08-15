@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
@@ -75,6 +76,7 @@ class MainActivity : ComponentActivity() {
             ) {
                     QuickFeeder()
                     MealPlanner()
+                    ConfigureFoodData()
             }
         }
 
@@ -95,7 +97,7 @@ class MainActivity : ComponentActivity() {
             Column() {
 
                 Image(
-                    painter = painterResource(R.drawable.quick_meal),
+                    painter = painterResource(R.drawable.salad_bowl),
                     contentDescription = null, // decorative
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -106,6 +108,7 @@ class MainActivity : ComponentActivity() {
                 Text(
                     text = "Quick feed",
                     fontSize = 20.sp,
+                    fontWeight = FontWeight.Medium,
                     modifier = Modifier.padding(5.dp, 0.dp)
                 )
 
@@ -144,11 +147,51 @@ class MainActivity : ComponentActivity() {
                 Text(
                     text = "Meal planner",
                     fontSize = 20.sp,
+                    fontWeight = FontWeight.Medium,
                     modifier = Modifier.padding(5.dp, 0.dp)
                 )
 
                 Text(
                     text = "Plan an entire day's meal",
+                    fontSize = 12.sp,
+                    modifier = Modifier.padding(5.dp, 0.dp)
+                )
+            }
+        }
+    }
+
+    @OptIn(ExperimentalMaterial3Api::class)
+    @Composable
+    fun ConfigureFoodData() {
+        Card(
+            onClick = {configureData()},
+            modifier = Modifier.size(width = 400.dp, height = 150.dp),
+            shape = CardDefaults.shape,
+            colors = CardDefaults.cardColors(),
+            elevation = CardDefaults.cardElevation(
+                defaultElevation = 10.dp
+            ),
+        ){
+            Column() {
+
+                Image(
+                    painter = painterResource(R.drawable.burger),
+                    contentDescription = null, // decorative
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .height(100.dp)
+                        .fillMaxWidth()
+                )
+
+                Text(
+                    text = "Deconstructed food",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier.padding(5.dp, 0.dp)
+                )
+
+                Text(
+                    text = "Configure food data",
                     fontSize = 12.sp,
                     modifier = Modifier.padding(5.dp, 0.dp)
                 )
@@ -163,6 +206,11 @@ class MainActivity : ComponentActivity() {
 
     private fun planMeal() {
         val intent = Intent(this, MealPlanner::class.java)
+        startActivity(intent)
+    }
+
+    private fun configureData() {
+        val intent = Intent(this, ConfigureData::class.java)
         startActivity(intent)
     }
 
