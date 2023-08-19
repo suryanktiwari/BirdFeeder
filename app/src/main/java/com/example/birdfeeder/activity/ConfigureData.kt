@@ -19,7 +19,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,7 +27,6 @@ import com.example.birdfeeder.data.MealConstants
 import com.example.birdfeeder.data.MealConstants.Companion.randomColor
 import com.example.birdfeeder.data.getMealManagerInstance
 import com.example.birdfeeder.ui.theme.BirdFeederTheme
-import kotlin.random.Random
 
 class ConfigureData : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,6 +78,9 @@ class ConfigureData : ComponentActivity() {
                 colors = CardDefaults.cardColors(
                     containerColor = randomColor()
                 ),
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = 10.dp
+                )
             ) {
                 // meal type text
                 Text(
