@@ -25,9 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.ExperimentalUnitApi
-import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.birdfeeder.R
@@ -69,15 +66,6 @@ class MainActivity : ComponentActivity() {
         getMealManagerInstance().parseLoadedMeals(mealList)
     }
 
-    @OptIn(ExperimentalUnitApi::class)
-    @Composable
-    fun FeederGreeting() {
-        Text(
-            text = "Bird Feeder",
-            fontSize = TextUnit(10f, TextUnitType.Em),
-        )
-    }
-
     @Composable
     fun ParentFeeder() {
         Column(
@@ -88,7 +76,7 @@ class MainActivity : ComponentActivity() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(50.dp)
         ) {
-            FeederGreeting()
+            FeederLogo()
             Column(
                 modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -100,6 +88,18 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+    }
+
+    @Composable
+    fun FeederLogo() {
+        Image(
+            painter = painterResource(R.drawable.bird_feeder_logo),
+            contentDescription = null, // decorative
+            contentScale = ContentScale.FillWidth,
+            modifier = Modifier
+                .height(100.dp)
+                .fillMaxWidth()
+        )
     }
 
     @OptIn(ExperimentalMaterial3Api::class)
