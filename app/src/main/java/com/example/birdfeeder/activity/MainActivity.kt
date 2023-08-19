@@ -31,6 +31,9 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.birdfeeder.R
+import com.example.birdfeeder.data.Meal
+import com.example.birdfeeder.data.getMealManagerInstance
+import com.example.birdfeeder.data.getRawFoodDataHandlerInstance
 import com.example.birdfeeder.ui.theme.BirdFeederTheme
 
 class MainActivity : ComponentActivity() {
@@ -48,6 +51,22 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        loadAndProcessFoodData()
+    }
+
+    private fun loadAndProcessFoodData() {
+        val mealList = loadFoodDataFromRawResource()
+        processFoodData(mealList)
+    }
+
+    private fun loadFoodDataFromRawResource(): MutableList<Meal> {
+        val rawFoodDataHandler = getRawFoodDataHandlerInstance();
+        rawFoodDataHandler.readFoodDataFromRawResource(resources.openRawResource(R.raw.feeder_feed));
+        return rawFoodDataHandler.getLoadedMeals()
+    }
+
+    private fun processFoodData(mealList: MutableList<Meal>) {
+        getMealManagerInstance().parseLoadedMeals(mealList)
     }
 
     @OptIn(ExperimentalUnitApi::class)
