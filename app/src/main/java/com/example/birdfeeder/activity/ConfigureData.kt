@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.birdfeeder.data.Meal
 import com.example.birdfeeder.data.MealConstants
+import com.example.birdfeeder.data.MealConstants.Companion.randomColor
 import com.example.birdfeeder.data.getMealManagerInstance
 import com.example.birdfeeder.ui.theme.BirdFeederTheme
 import kotlin.random.Random
@@ -40,16 +41,31 @@ class ConfigureData : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LazyColumn(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier
-                            .padding(all = 5.dp)
-                            .fillMaxWidth(),
-                        verticalArrangement = Arrangement.spacedBy(5.dp),
-                    ) {
-                        items(MealConstants.MealTypes.values()) { type ->
-                            mealManagerInstance.getMealsByType(type.value)
-                                ?.let { MealTypeParentDisplay(type.value, it) }
+                    Column {
+                        Card(
+                            colors = CardDefaults.cardColors(
+                                containerColor = randomColor()
+                            ),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            // meal type text
+                            Text(
+                                text = "All meals by type",
+                                fontSize = 25.sp, fontWeight = FontWeight.W700, modifier = Modifier.padding(10.dp)
+                            )
+                        }
+
+                        LazyColumn(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            modifier = Modifier
+                                .padding(all = 5.dp)
+                                .fillMaxWidth(),
+                            verticalArrangement = Arrangement.spacedBy(5.dp),
+                        ) {
+                            items(MealConstants.MealTypes.values()) { type ->
+                                mealManagerInstance.getMealsByType(type.value)
+                                    ?.let { MealTypeParentDisplay(type.value, it) }
+                            }
                         }
                     }
                 }
@@ -107,18 +123,6 @@ class ConfigureData : ComponentActivity() {
                 }
             }
         }
-    }
-
-    private fun randomColor(): Color {
-        val random = Random.Default
-        // using these to make sure only light random colors are picked
-        val fromColorRangeLimit = 0.5;
-        val untilColorRangeLimit = 0.9;
-        return Color(
-            red = random.nextDouble(fromColorRangeLimit, untilColorRangeLimit).toFloat(),
-            green = random.nextDouble(fromColorRangeLimit, untilColorRangeLimit).toFloat(),
-            blue = random.nextDouble(fromColorRangeLimit, untilColorRangeLimit).toFloat(),
-        )
     }
 
     private fun capitalizeFirstLetterOfString(str: String): String {
