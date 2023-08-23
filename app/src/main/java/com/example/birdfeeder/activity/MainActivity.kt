@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -109,7 +110,7 @@ class MainActivity : ComponentActivity() {
             onClick = {quickFeed()},
             modifier = Modifier.size(width = 400.dp, height = 150.dp),
             shape = CardDefaults.shape,
-            colors = CardDefaults.cardColors(),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(
                 defaultElevation = 10.dp
             ),
@@ -148,7 +149,7 @@ class MainActivity : ComponentActivity() {
             onClick = {planMeal()},
             modifier = Modifier.size(width = 400.dp, height = 150.dp),
             shape = CardDefaults.shape,
-            colors = CardDefaults.cardColors(),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(
                 defaultElevation = 10.dp
             ),
@@ -187,7 +188,7 @@ class MainActivity : ComponentActivity() {
             onClick = {configureData()},
             modifier = Modifier.size(width = 400.dp, height = 150.dp),
             shape = CardDefaults.shape,
-            colors = CardDefaults.cardColors(),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(
                 defaultElevation = 10.dp
             ),
