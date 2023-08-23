@@ -19,11 +19,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.birdfeeder.data.Meal
 import com.example.birdfeeder.data.MealConstants
+import com.example.birdfeeder.data.MealConstants.Companion.capitalizeFirstLetterOfString
 import com.example.birdfeeder.data.MealConstants.Companion.randomColor
 import com.example.birdfeeder.data.getMealManagerInstance
 import com.example.birdfeeder.ui.theme.BirdFeederTheme
@@ -40,24 +42,14 @@ class ConfigureData : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     Column {
-                        Card(
-                            colors = CardDefaults.cardColors(
-                                containerColor = randomColor()
-                            ),
-                            modifier = Modifier.fillMaxWidth(),
-                        ) {
-                            // meal type text
-                            Text(
-                                text = "All meals by type",
-                                fontSize = 25.sp, fontWeight = FontWeight.W700, modifier = Modifier.padding(10.dp)
-                            )
-                        }
+                        Text(
+                            text = "All meals by type",
+                            fontSize = 25.sp, fontWeight = FontWeight.W700, modifier = Modifier.padding(10.dp)
+                        )
 
                         LazyColumn(
                             horizontalAlignment = Alignment.CenterHorizontally,
-                            modifier = Modifier
-                                .padding(all = 5.dp)
-                                .fillMaxWidth(),
+                            modifier = Modifier.padding(all = 5.dp).fillMaxWidth(),
                             verticalArrangement = Arrangement.spacedBy(5.dp),
                         ) {
                             items(MealConstants.MealTypes.values()) { type ->
@@ -124,9 +116,5 @@ class ConfigureData : ComponentActivity() {
                 }
             }
         }
-    }
-
-    private fun capitalizeFirstLetterOfString(str: String): String {
-        return str.substring(0, 1).uppercase() + str.substring(1).lowercase()
     }
 }
