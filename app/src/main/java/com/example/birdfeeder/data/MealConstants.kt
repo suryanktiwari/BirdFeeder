@@ -1,6 +1,7 @@
 package com.example.birdfeeder.data
 
 import androidx.compose.ui.graphics.Color
+import com.example.birdfeeder.R
 import kotlin.random.Random
 
 class MealConstants {
@@ -9,12 +10,24 @@ class MealConstants {
         LUNCH("lunch"),
         DINNER("dinner"),
         SNACK("snack"),
-        ANY("any"),
     }
 
     companion object {
         const val COMMA_DELIMITER: String = ",";
         const val SEMI_COLON_DELIMITER: String = ";";
+
+        val MIDNIGHT_SNACK_HOUR_RANGE = 0..5;
+        val BREAKFAST_HOUR_RANGE = 6..10;
+        val LUNCH_HOUR_RANGE = 11..15;
+        val SNACK_HOUR_RANGE = 16..18;
+        val DINNER_HOUR_RANGE = 18..23;
+
+        val MEAL_BACKGROUNDS = mapOf(
+            MealTypes.BREAKFAST to R.drawable.breakfast,
+            MealTypes.LUNCH to R.drawable.lunch,
+            MealTypes.DINNER to R.drawable.dinner,
+            MealTypes.SNACK to R.drawable.snacks,
+        )
 
         fun randomColor(): Color {
             val random = Random.Default
@@ -26,6 +39,10 @@ class MealConstants {
                 green = random.nextDouble(fromColorRangeLimit, untilColorRangeLimit).toFloat(),
                 blue = random.nextDouble(fromColorRangeLimit, untilColorRangeLimit).toFloat(),
             )
+        }
+
+        fun capitalizeFirstLetterOfString(str: String): String {
+            return str.substring(0, 1).uppercase() + str.substring(1).lowercase()
         }
     }
 }
