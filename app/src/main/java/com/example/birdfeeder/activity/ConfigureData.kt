@@ -27,12 +27,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.birdfeeder.R
 import com.example.birdfeeder.data.Meal
 import com.example.birdfeeder.data.MealConstants
 import com.example.birdfeeder.data.MealConstants.Companion.MEAL_BACKGROUNDS
 import com.example.birdfeeder.data.MealConstants.Companion.capitalizeFirstLetterOfString
-import com.example.birdfeeder.data.MealConstants.Companion.randomColor
 import com.example.birdfeeder.data.getMealManagerInstance
 import com.example.birdfeeder.ui.theme.BirdFeederTheme
 
@@ -59,9 +57,6 @@ class ConfigureData : ComponentActivity() {
                             verticalArrangement = Arrangement.spacedBy(5.dp),
                         ) {
                             items(MealConstants.MealTypes.values()) { type ->
-                                println(type)
-                                println(MEAL_BACKGROUNDS)
-                                println(MEAL_BACKGROUNDS[type])
                                 mealManagerInstance.getMealsByType(type.value)
                                     ?.let { MealTypeParentDisplay(type.value, it, MEAL_BACKGROUNDS[type]!!) }
                             }

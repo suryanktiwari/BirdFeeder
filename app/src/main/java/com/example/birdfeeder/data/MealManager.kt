@@ -21,8 +21,12 @@ class MealManager {
 
     private val mealsByType: HashMap<String, MutableList<Meal>> = HashMap()
 
-    fun getMealsByType(type: String): MutableList<Meal>? {
-        return mealsByType[type];
+    fun getMealsByType(type: String): MutableList<Meal> {
+        return if (type in mealsByType) {
+            mealsByType[type]!!;
+        } else {
+            mutableListOf()
+        }
     }
 
     fun getMealsByAllType(): HashMap<String, MutableList<Meal>> {

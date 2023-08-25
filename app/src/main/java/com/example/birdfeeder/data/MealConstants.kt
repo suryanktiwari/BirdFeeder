@@ -29,6 +29,34 @@ class MealConstants {
             MealTypes.SNACK to R.drawable.snacks,
         )
 
+        val QUICK_MEAL_PREFIX_DIALOGUES = listOf<String>(
+            "You could have some",
+            "How about having",
+            "A good candidate is",
+            "Sometimes I like having",
+            "How about some",
+            "You're not ready for",
+            "Mouthwatering",
+            "You can never go wrong with",
+            "Remember when you had",
+            "I suggest having",
+        );
+
+        val QUICK_MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES = listOf<String>(
+            "with",
+            "and",
+            "could be",
+            "accompanied by",
+        )
+
+        val QUICK_MEAL_VARIATIONS_PREFIX_DIALOGUES = listOf<String>(
+            "Could be cooked like",
+            "Potential matches",
+            "Variations",
+            "Varied as",
+            "Like",
+        )
+
         fun randomColor(): Color {
             val random = Random.Default
             // using these to make sure only light random colors are picked

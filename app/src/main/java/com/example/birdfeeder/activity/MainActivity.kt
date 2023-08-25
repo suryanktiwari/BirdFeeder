@@ -130,13 +130,13 @@ class MainActivity : ComponentActivity() {
                     text = "Quick feed",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(5.dp, 0.dp)
+                    modifier = Modifier.padding(10.dp, 0.dp)
                 )
 
                 Text(
                     text = "Random one-off meal suggestion",
                     fontSize = 12.sp,
-                    modifier = Modifier.padding(5.dp, 0.dp)
+                    modifier = Modifier.padding(10.dp, 0.dp)
                 )
             }
         }
@@ -169,13 +169,13 @@ class MainActivity : ComponentActivity() {
                     text = "Meal planner",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(5.dp, 0.dp)
+                    modifier = Modifier.padding(10.dp, 0.dp)
                 )
 
                 Text(
                     text = "Plan an entire day's meal",
                     fontSize = 12.sp,
-                    modifier = Modifier.padding(5.dp, 0.dp)
+                    modifier = Modifier.padding(10.dp, 0.dp)
                 )
             }
         }
@@ -208,13 +208,13 @@ class MainActivity : ComponentActivity() {
                     text = "Deconstructed food",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(5.dp, 0.dp)
+                    modifier = Modifier.padding(10.dp, 0.dp)
                 )
 
                 Text(
                     text = "Configure food data",
                     fontSize = 12.sp,
-                    modifier = Modifier.padding(5.dp, 0.dp)
+                    modifier = Modifier.padding(10.dp, 0.dp)
                 )
             }
         }
