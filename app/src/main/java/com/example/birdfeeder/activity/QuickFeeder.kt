@@ -44,9 +44,9 @@ import com.example.birdfeeder.data.MealConstants.Companion.BREAKFAST_HOUR_RANGE
 import com.example.birdfeeder.data.MealConstants.Companion.DINNER_HOUR_RANGE
 import com.example.birdfeeder.data.MealConstants.Companion.LUNCH_HOUR_RANGE
 import com.example.birdfeeder.data.MealConstants.Companion.MIDNIGHT_SNACK_HOUR_RANGE
-import com.example.birdfeeder.data.MealConstants.Companion.QUICK_MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES
-import com.example.birdfeeder.data.MealConstants.Companion.QUICK_MEAL_PREFIX_DIALOGUES
-import com.example.birdfeeder.data.MealConstants.Companion.QUICK_MEAL_VARIATIONS_PREFIX_DIALOGUES
+import com.example.birdfeeder.data.MealConstants.Companion.MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES
+import com.example.birdfeeder.data.MealConstants.Companion.MEAL_PREFIX_DIALOGUES
+import com.example.birdfeeder.data.MealConstants.Companion.MEAL_VARIATIONS_PREFIX_DIALOGUES
 import com.example.birdfeeder.data.MealConstants.Companion.SNACK_HOUR_RANGE
 import com.example.birdfeeder.data.MealConstants.Companion.capitalizeFirstLetterOfString
 import com.example.birdfeeder.data.getMealManagerInstance
@@ -200,7 +200,7 @@ class QuickFeeder : ComponentActivity() {
 
                 // Chatter text for meal name
                 Text(
-                    QUICK_MEAL_PREFIX_DIALOGUES.random(),
+                    MEAL_PREFIX_DIALOGUES.random(),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.W500,
                     color = Color.Gray,
@@ -212,7 +212,7 @@ class QuickFeeder : ComponentActivity() {
                 if (mealVariationText != "") {
                     // Chatter text for accompaniments
                     Text(
-                        QUICK_MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES.random(),
+                        MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES.random(),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.W500,
                         color = Color.Gray,
@@ -229,7 +229,7 @@ class QuickFeeder : ComponentActivity() {
                 if (mealAccompanimentText != "") {
                     // Chatter text for meal variations
                     Text(
-                        QUICK_MEAL_VARIATIONS_PREFIX_DIALOGUES.random(),
+                        MEAL_VARIATIONS_PREFIX_DIALOGUES.random(),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.W500,
                         color = Color.Gray,

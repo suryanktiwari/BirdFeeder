@@ -29,7 +29,7 @@ class MealConstants {
             MealTypes.SNACK to R.drawable.snacks,
         )
 
-        val QUICK_MEAL_PREFIX_DIALOGUES = listOf<String>(
+        val MEAL_PREFIX_DIALOGUES = listOf<String>(
             "You could have some",
             "How about having",
             "A good candidate is",
@@ -42,14 +42,14 @@ class MealConstants {
             "I suggest having",
         );
 
-        val QUICK_MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES = listOf<String>(
+        val MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES = listOf<String>(
             "with",
             "and",
             "could be",
             "accompanied by",
         )
 
-        val QUICK_MEAL_VARIATIONS_PREFIX_DIALOGUES = listOf<String>(
+        val MEAL_VARIATIONS_PREFIX_DIALOGUES = listOf<String>(
             "Could be cooked like",
             "Potential matches",
             "Variations",

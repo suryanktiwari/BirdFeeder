@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -55,6 +56,7 @@ class ConfigureData : ComponentActivity() {
                             horizontalAlignment = Alignment.CenterHorizontally,
                             modifier = Modifier.padding(all = 10.dp).fillMaxWidth(),
                             verticalArrangement = Arrangement.spacedBy(5.dp),
+                            contentPadding = PaddingValues(10.dp),
                         ) {
                             items(MealConstants.MealTypes.values()) { type ->
                                 mealManagerInstance.getMealsByType(type.value)
