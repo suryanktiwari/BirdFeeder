@@ -77,11 +77,11 @@ class MealPlanner : ComponentActivity() {
         LazyColumn(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
-                .padding(0.dp, 10.dp)
+                .padding(0.dp, 0.dp)
                 .fillMaxWidth()
                 .fillMaxHeight(),
-            verticalArrangement = Arrangement.spacedBy(5.dp),
-            contentPadding = PaddingValues(10.dp),
+            verticalArrangement = Arrangement.spacedBy(0.dp),
+            contentPadding = PaddingValues(0.dp),
         ) {
             items(plannedMeals) { type ->
                 MealPlannerForType(type.value)
@@ -110,7 +110,7 @@ class MealPlanner : ComponentActivity() {
         loadNewMealForType(mealType)
         Column (
             modifier = Modifier
-                .padding(10.dp)
+                .padding(10.dp, 5.dp)
                 .fillMaxSize(),
         ) {
             Card(
@@ -139,6 +139,7 @@ class MealPlanner : ComponentActivity() {
         Card(
             onClick = {loadNewMealForType(mealType)},
             modifier = Modifier
+                .height(160.dp)
                 .fillMaxWidth()
                 .padding(5.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White),
