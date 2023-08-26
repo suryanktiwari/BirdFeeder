@@ -190,7 +190,7 @@ class QuickFeeder : ComponentActivity() {
         val variationScrollState = rememberScrollState()
 
         Card(
-            modifier = Modifier.padding(all = 5.dp).fillMaxWidth().fillMaxHeight(),
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(),
             colors = CardDefaults.cardColors(containerColor = Color.White),
         ) {
             Column(

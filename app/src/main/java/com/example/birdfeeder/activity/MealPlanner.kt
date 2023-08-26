@@ -110,7 +110,7 @@ class MealPlanner : ComponentActivity() {
         loadNewMealForType(mealType)
         Column (
             modifier = Modifier
-                .padding(10.dp, 5.dp)
+                .padding(20.dp, 5.dp)
                 .fillMaxSize(),
         ) {
             Card(
