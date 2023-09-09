@@ -1,16 +1,50 @@
-"Item,ItemType,Variations,Accompaniment"
-"Masala Oats,Breakfast,,"
-"Cheela,Breakfast,Besan;Lauki;Mixed,Raita;Chutney"
-"Parantha,Breakfast,Aloo;Methi;Gobhi;Paneer,Raita;Chutney"
-"Dosa,Breakfast,Plain;Masala,Sambhar;Chutney"
-"Idly,Breakfast,Plain;Rava,Sambhar;Chutney"
-"Brinjal,Lunch;Dinner,Aloo;Bharta,Roti"
-"Aloo Tamatar,Lunch;Dinner,,Roti"
-"Dal,Lunch;Dinner,Toor;Urad;Mixed,Roti;Rice"
-"Noodles,Lunch;Dinner,,"
-"Pasta,Lunch;Dinner,,"
-"Guacamole,Snack,,Toast;Nachos"
-"Lauki,Lunch;Dinner,,Roti"
-"Shimla mirch,Lunch;Dinner,,Roti"
-"Salad,Snack,Fruit;Mixed,"
-"Bhelpuri,Snack,,"
+﻿Item,ItemType,Variations,Accompaniment
+Masala Oats,Breakfast,Veg,Tea;Coffee
+Cheela,Breakfast,Besan;Lauki;Mixed;Moong Dal,Raita;Chutney;Tea;Coffee
+Parantha,Breakfast;Lunch,Aloo;Methi;Gobhi;Paneer;Mixed,Raita;Chutney;Tea;Coffee
+Dosa,Breakfast,Plain;Masala;Rava;Ragi,Sambhar;Chutney
+Idly,Breakfast,Plain;Rava;Ragi,Sambhar;Chutney
+Poha,Breakfast,,Tea;Coffee
+Sandwich,Breakfast,Aloo;Paneer;Vegetable;Cheese,Tea;Coffee
+Upma,Breakfast,,Tea;Coffee
+Chaat,Breakfast;Snack,Black Chana;Lobia;Mixed;Safed Chana,Tea;Coffee
+Uttapam,Breakfast,,Tea;Coffee
+Thelpa,Breakfast,Methi;Palak,Tea;Coffee
+Khichdi,Breakfast;Lunch,Kali dal; Moong dal; Veg,
+Daliya,Breakfast,Veg; Sweet,
+Sprouts,Breakfast,Veg; Paneer,
+Vada,Breakfast,sambar; dahi,Tea;Coffee
+Brinjal,Lunch;Dinner,Aloo;Bharta,Roti
+Aloo,Lunch;Dinner,Tamatar;Dum;Jeera; soyabean,Roti
+Dal,Lunch;Dinner,Toor;Urad;Moong;Mixed;Makhni; masoor,Roti;Rice
+Noodles,Lunch;Dinner,hakka; millet,Tea;Coffee
+Pasta,Lunch;Dinner,red; white; mix; chinese ,Tea;Coffee
+Lauki,Lunch;Dinner,,Roti; dahi
+Shimla mirch,Lunch;Dinner,,Roti
+Biryani,Lunch;Dinner,Veg; Paneer,Raita;Chutney
+Fried Rice,Lunch;Dinner,Normal; Chinese,Raita;Chutney;Manchurian
+Gobhi,Lunch;Dinner,Aloo;Manchurian,Roti; noodles
+Methi,Lunch;Dinner,Aloo;Theple;Paneer,Tea
+Palak,Lunch;Dinner,Aloo;Theple;Paneer,
+Paneer,Lunch;Dinner,Bhurji;Shahi;Palak; chili,Roti;Rice
+Soyabean,Lunch;Dinner,Aloo,Roti
+Karela,Lunch;Dinner,,
+Rajma,Lunch;Dinner,,Roti;Rice
+Chole,Lunch;Dinner,,Roti;Rice;Kulche;Bhature
+Beans,Lunch;Dinner,Aloo;Carrot,
+Pumpkin,Lunch;Dinner,,Roti
+Bhindi,Lunch;Dinner,Masala;Karari,Roti
+Kadhi,Lunch;Dinner,,Roti;Rice
+Kofta,Lunch;Dinner,,Roti;Rice
+Soup,Lunch;Dinner,Manchow;Tomato;Lung-Fung;Vegetable,Crunchy noodles
+Salad,Snack,Fruit;Mixed Veg,Tea;Coffee
+Bhelpuri,Snack,,Tea;Coffee
+Bread Roll,Snack,,Tea;Coffee
+Pakode,Snack,Aloo;Paneer;Onion;Bread,Tea;Coffee
+Tikki,Snack,Aloo; Paneer,Tea;Coffee
+Roasted Paneer,Snack,Tava; Airfryer,Tea;Coffee
+Guacamole,Snack,,Toast;Nachos
+Pizza,Snack,,Tea;Coffee
+Nachos,Snack,Plain; Salsa ,Tea;Coffee
+Bun maska,Snack,Butter; Bhujia,Tea;Coffee
+Cutlets,Snack,Paneer;Aloo;Bread,Tea;Coffee
