@@ -47,6 +47,8 @@ class MealPlanner : ComponentActivity() {
         MealConstants.MealTypes.DINNER,
     )
 
+    private var mealChatterDialogues = initializeMealDialogues();
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -150,7 +152,7 @@ class MealPlanner : ComponentActivity() {
             ) {
                 // Chatter text for meal name
                 Text(
-                    MealConstants.MEAL_PREFIX_DIALOGUES.random(),
+                    mealChatterDialogues[mealType]!![MealConstants.MealDialogueOrder.MEAL_PREFIX_DIALOG.value],
                     fontSize = 14.sp,
                     fontWeight = FontWeight.W500,
                     color = Color.Gray,
@@ -163,7 +165,7 @@ class MealPlanner : ComponentActivity() {
                 if (meal.variations[0].isNotEmpty()) {
                     // Chatter text for meal variations
                     Text(
-                        MealConstants.MEAL_VARIATIONS_PREFIX_DIALOGUES.random(),
+                        mealChatterDialogues[mealType]!![MealConstants.MealDialogueOrder.MEAL_VARIATIONS_DIALOG.value],
                         fontSize = 12.sp,
                         fontWeight = FontWeight.W500,
                         color = Color.Gray,
@@ -180,7 +182,7 @@ class MealPlanner : ComponentActivity() {
                 if (meal.accompaniment[0].isNotEmpty()) {
                     // Chatter text for accompaniments
                     Text(
-                        MealConstants.MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES.random(),
+                        mealChatterDialogues[mealType]!![MealConstants.MealDialogueOrder.MEAL_ACCOMPANIMENT_DIALOG.value],
                         fontSize = 12.sp,
                         fontWeight = FontWeight.W500,
                         color = Color.Gray,
@@ -198,7 +200,28 @@ class MealPlanner : ComponentActivity() {
     }
 
     private fun loadNewMealForType(mealType: String) {
+        changeMealDialogForType(mealType)
         mealSuggestionByType[mealType] = mealManagerInstance.getMealsByType(mealType).random();
+    }
+
+    private fun initializeMealDialogues(): MutableMap<String, List<String>> {
+        val initialMealDialogues = mutableMapOf<String, List<String>>();
+        plannedMeals.forEach { mealType ->
+            initialMealDialogues[mealType.value] = listOf(
+                MealConstants.MEAL_PREFIX_DIALOGUES.random(),
+                MealConstants.MEAL_VARIATIONS_PREFIX_DIALOGUES.random(),
+                MealConstants.MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES.random()
+            )
+        }
+        return initialMealDialogues
+    }
+
+    private fun changeMealDialogForType(mealType: String) {
+        mealChatterDialogues[mealType] = listOf(
+            MealConstants.MEAL_PREFIX_DIALOGUES.random(),
+            MealConstants.MEAL_VARIATIONS_PREFIX_DIALOGUES.random(),
+            MealConstants.MEAL_ACCOMPANIMENT_PREFIX_DIALOGUES.random()
+        )
     }
 
 }

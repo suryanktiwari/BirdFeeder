@@ -12,6 +12,12 @@ class MealConstants {
         SNACK("snack"),
     }
 
+    enum class MealDialogueOrder(val value: Int) {
+        MEAL_PREFIX_DIALOG(0),
+        MEAL_VARIATIONS_DIALOG(1),
+        MEAL_ACCOMPANIMENT_DIALOG(2),
+    }
+
     companion object {
         const val COMMA_DELIMITER: String = ",";
         const val SEMI_COLON_DELIMITER: String = ";";
